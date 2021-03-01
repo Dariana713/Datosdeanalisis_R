@@ -1,0 +1,17 @@
+#Carga de docuemntos prueba
+setwd("~/R/Pruebas/Prueba_19_02_21")
+#carga libreria
+library(raster)
+#?getData
+#Descarga ALT
+DEM<-getData('alt', country='ESP', mask=TRUE)
+DEM
+plot(DEM)
+#?terrain
+x <- terrain(DEM, opt=c('slope', 'aspect'), unit='degrees')
+plot(x)
+#?writeRaster
+#Imagen TIF
+#install.packages("rgdal", dependencies = TRUE)
+library(rgdal)
+writeRaster(DEM, "DEM.tif", overwrite=TRUE, NAflag=-9999)

@@ -1,7 +1,8 @@
-# Datos de analisis de Geomorfometría
+# Datos de análisis de Geo morfometría
 
 Se muestran los análisis de realizados en Rstudio y en SAGA GIS, para realizar y analizar variables de Geo morfometría de una zona de estudio. 
-Para el análisis de las variables de Geo morfometría de utilizo el programa Rstudio donde se genero el modelo digital de elevación, es la pieza clave para el análisis geo morfométrico .
+Para el análisis de las variables de Geo morfometría de utilizo el programa Rstudio donde se generó el modelo digital de elevación, es la pieza clave para el análisis geo morfométrico.
+
 
 # Código en Rstudio 
 
@@ -14,7 +15,7 @@ library(raster)
 
  *?getData*
 
-Se consulto get Data para descagar los Modelos digitales de Elevación de la zona de estudio
+Se consulto get Data para descargar los Modelos digitales de Elevación de la zona de estudio.
 #Descarga ALT
 DEM<-getData('alt', country='ESP', mask=TRUE)
 DEM
@@ -28,20 +29,20 @@ plot(x)
 
  *?writeRaster*
 
-Al tener la indormacion se procedio a guardar la imagen formato TIF por lo que se istalo el paquete rgdal; y de esta forma guardar la image a ser procesada en SAGA GIS.
+Al tener la información se procedió a guardar la imagen formato TIF por lo que se instaló el paquete rgdal; y de esta forma guardar la imagen a ser procesada en SAGA GIS.
+
 Imagen TIF
 install.packages("rgdal", dependencies = TRUE)
 library(rgdal)
 writeRaster(DEM, "DEM.tif", overwrite=TRUE, NAflag=-9999)
  
 # Analisis en SAGA GIS
-
-El Modelos se analizo en el programa SAGA GIS, que es u sistema de análisis geo científicos automatizados de código abierto utilizado para analizar datos espaciales y gran cantidad de datos de módulos para el análisis de datos vectoriales (puntos, líneas y polígonos).
+El Modelos se analizó en el programa SAGA GIS, que es u sistema de análisis geo científicos automatizados de código abierto utilizado para analizar datos espaciales y gran cantidad de datos de módulos para el análisis de datos vectoriales (puntos, líneas y polígonos).
 La topografía que están directamente relacionados con la variabilidad de la humedad del suelo (Pike y Evans, 2009), como la acumulación de flujo terrestre. El índice de humedad topográfica, indica áreas donde el agua tiende a acumularse por efecto de la topografía y es un índice secundario derivado de la combinación del área de ladera ascendente que drena a través de un cierto punto por unidad de longitud de contorno y la pendiente del terreno local (Wilson y Gallant 2000). 
 La relación de geomorfometría e hidrología según Guevara y Vargas (2019), es útil para evitar redundancias estadísticas. 
 
 # 1
-En la opción de DATA, se cargo el DEM de España.
+En la opción de DATA, se cargó el DEM de España.
 # 2
 En Geoprocessing se selecciona Terrain Analysis, luego Basic terrain analysis, luego se selcciona las cordenadas de la imagen, luego el valor de elevación que en este caso es el DEM y asi se obtiene las 14 variables, como ser Analytical Hillshading, slope, aspect, flow acumulation... 
 

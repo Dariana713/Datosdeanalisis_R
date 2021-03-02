@@ -13,6 +13,7 @@ Se necesito cargar una librería raster
 library(raster)
 
  *?getData*
+
 Se consulto get Data para descagar los Modelos digitales de Elevación de la zona de estudio
 #Descarga ALT
 DEM<-getData('alt', country='ESP', mask=TRUE)
@@ -20,11 +21,13 @@ DEM
 plot(DEM)
 
  *?terrain*
+
 De estos era necesario conocer las pendiente y la orientación.
 x <- terrain(DEM, opt=c('slope', 'aspect'), unit='degrees')
 plot(x)
 
  *?writeRaster*
+
 Al tener la indormacion se procedio a guardar la imagen formato TIF por lo que se istalo el paquete rgdal; y de esta forma guardar la image a ser procesada en SAGA GIS.
 Imagen TIF
 install.packages("rgdal", dependencies = TRUE)
@@ -44,5 +47,7 @@ En Geoprocessing se selecciona Terrain Analysis, luego Basic terrain analysis, l
 
 # *Referencias*
 Guevara M, Vargas R (2019) Reducción de la humedad del suelo satelital mediante geomorfometría y aprendizaje automático. PLoS ONE 14 (9): e0219639. https://doi.org/10.1371/journal.pone.0219639
+
 Pike R.J., Evans I.S., T., 2009. Chapter 1 Geomorphometry: A Brief Guide, in: Developments in Soil Science. Elsevier, pp. 3–30.
+
 Wilson J. P., & Gallant J. C. (2000). Digital terrain analysis. Terrain analysis: Principles and applications, 6(12), 1–27. Google Scholar

@@ -52,3 +52,6 @@ Guevara M, Vargas R (2019) Reducción de la humedad del suelo satelital mediante
 Pike R.J., Evans I.S., T., 2009. Chapter 1 Geomorphometry: A Brief Guide, in: Developments in Soil Science. Elsevier, pp. 3–30.
 
 Wilson J. P., & Gallant J. C. (2000). Digital terrain analysis. Terrain analysis: Principles and applications, 6(12), 1–27. Google Scholar
+
+>generico.jpg 
+>

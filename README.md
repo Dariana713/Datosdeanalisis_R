@@ -9,8 +9,10 @@ Para el análisis de las variables de Geo morfometría de utilizo el programa Rs
 *Carga de docuemntos prueba*
 Se guarda la información
 >setwd("~/R/Pruebas/Prueba_19_02_21")
+>
 *carga libreria*
-Se necesito cargar una librería raster 
+Se necesito cargar una librería raster
+
 >library(raster)
 
  *?getData*
@@ -32,8 +34,10 @@ De estos era necesario conocer las pendiente y la orientación.
 Al tener la información se procedió a guardar la imagen formato TIF por lo que se instaló el paquete rgdal; y de esta forma guardar la imagen a ser procesada en SAGA GIS.
 
 Imagen TIF
->>install.packages("rgdal", dependencies = TRUE)
+>install.packages("rgdal", dependencies = TRUE)
+
 >library(rgdal)
+
 >writeRaster(DEM, "DEM.tif", overwrite=TRUE, NAflag=-9999)
  
 # Analisis en SAGA GIS
@@ -55,5 +59,4 @@ Wilson J. P., & Gallant J. C. (2000). Digital terrain analysis. Terrain analysis
 
 
 # *Flujo de trabajo*
-[generico.jpg]
 

@@ -45,9 +45,9 @@ El Modelos se analizó en el programa SAGA GIS, que es u sistema de análisis ge
 La topografía que están directamente relacionados con la variabilidad de la humedad del suelo (Pike y Evans, 2009), como la acumulación de flujo terrestre. El índice de humedad topográfica, indica áreas donde el agua tiende a acumularse por efecto de la topografía y es un índice secundario derivado de la combinación del área de ladera ascendente que drena a través de un cierto punto por unidad de longitud de contorno y la pendiente del terreno local (Wilson y Gallant 2000). 
 La relación de geomorfometría e hidrología según Guevara y Vargas (2019), es útil para evitar redundancias estadísticas. 
 
-# 1
+### 1
 En la opción de DATA, se cargó el DEM de España.
-# 2
+### 2
 En Geoprocessing se selecciona Terrain Analysis, luego Basic terrain analysis, luego se selcciona las cordenadas de la imagen, luego el valor de elevación que en este caso es el DEM y asi se obtiene las 14 variables, como ser Analytical Hillshading, slope, aspect, flow acumulation... 
 
 # *Referencias*

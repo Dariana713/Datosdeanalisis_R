@@ -18,7 +18,8 @@ Se necesito cargar una librería raster
  *?getData*
 
 Se consulto get Data para descargar los Modelos digitales de Elevación de la zona de estudio.
-#Descarga ALT
+
+*#Descarga ALT*
 >DEM<-getData('alt', country='ESP', mask=TRUE)
 >DEM
 >plot(DEM)
@@ -50,14 +51,14 @@ En la opción de DATA, se cargó el DEM de España.
 ### 2
 En Geoprocessing se selecciona Terrain Analysis, luego Basic terrain analysis, luego se selcciona las cordenadas de la imagen, luego el valor de elevación que en este caso es el DEM y asi se obtiene las 14 variables, como ser Analytical Hillshading, slope, aspect, flow acumulation... 
 
+
+# *Flujo de trabajo*
+![Flujo de procesos ](https://user-images.githubusercontent.com/78845785/109633763-c6e9b980-7b48-11eb-9fcf-4a6683ab787a.jpg)
+
+
 # *Referencias*
 Guevara M, Vargas R (2019) Reducción de la humedad del suelo satelital mediante geomorfometría y aprendizaje automático. PLoS ONE 14 (9): e0219639. https://doi.org/10.1371/journal.pone.0219639
 
 Pike R.J., Evans I.S., T., 2009. Chapter 1 Geomorphometry: A Brief Guide, in: Developments in Soil Science. Elsevier, pp. 3–30.
 
 Wilson J. P., & Gallant J. C. (2000). Digital terrain analysis. Terrain analysis: Principles and applications, 6(12), 1–27. Google Scholar
-
-
-# *Flujo de trabajo*
-
-

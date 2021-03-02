@@ -8,33 +8,33 @@ Para el análisis de las variables de Geo morfometría de utilizo el programa Rs
 
 *Carga de docuemntos prueba*
 Se guarda la información
-setwd("~/R/Pruebas/Prueba_19_02_21")
+>setwd("~/R/Pruebas/Prueba_19_02_21")
 *carga libreria*
 Se necesito cargar una librería raster 
-library(raster)
+>library(raster)
 
  *?getData*
 
 Se consulto get Data para descargar los Modelos digitales de Elevación de la zona de estudio.
 #Descarga ALT
-DEM<-getData('alt', country='ESP', mask=TRUE)
-DEM
-plot(DEM)
+>DEM<-getData('alt', country='ESP', mask=TRUE)
+>DEM
+>plot(DEM)
 
  *?terrain*
 
 De estos era necesario conocer las pendiente y la orientación.
-x <- terrain(DEM, opt=c('slope', 'aspect'), unit='degrees')
-plot(x)
+>x <- terrain(DEM, opt=c('slope', 'aspect'), unit='degrees')
+>plot(x)
 
  *?writeRaster*
 
 Al tener la información se procedió a guardar la imagen formato TIF por lo que se instaló el paquete rgdal; y de esta forma guardar la imagen a ser procesada en SAGA GIS.
 
 Imagen TIF
-install.packages("rgdal", dependencies = TRUE)
-library(rgdal)
-writeRaster(DEM, "DEM.tif", overwrite=TRUE, NAflag=-9999)
+>>install.packages("rgdal", dependencies = TRUE)
+>library(rgdal)
+>writeRaster(DEM, "DEM.tif", overwrite=TRUE, NAflag=-9999)
  
 # Analisis en SAGA GIS
 El Modelos se analizó en el programa SAGA GIS, que es u sistema de análisis geo científicos automatizados de código abierto utilizado para analizar datos espaciales y gran cantidad de datos de módulos para el análisis de datos vectoriales (puntos, líneas y polígonos).
@@ -53,5 +53,7 @@ Pike R.J., Evans I.S., T., 2009. Chapter 1 Geomorphometry: A Brief Guide, in: De
 
 Wilson J. P., & Gallant J. C. (2000). Digital terrain analysis. Terrain analysis: Principles and applications, 6(12), 1–27. Google Scholar
 
->generico.jpg 
->
+
+# *Flujo de trabajo*
+[generico.jpg]
+

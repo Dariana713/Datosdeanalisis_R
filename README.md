@@ -49,7 +49,10 @@ La relación de geomorfometría e hidrología según Guevara y Vargas (2019), es
 ### 1
 En la opción de DATA, se cargó el DEM de España.
 ### 2
-En Geoprocessing se selecciona Terrain Analysis, luego Basic terrain analysis, luego se selcciona las cordenadas de la imagen, luego el valor de elevación que en este caso es el DEM y asi se obtiene las 14 variables, como ser Analytical Hillshading, slope, aspect, flow acumulation... 
+*En Geoprocessing se selecciona Terrain Analysis.
+Luego Basic terrain analysis.
+Despues se selcciona las coordenadas de la imagen.
+En el valor de elevación se coloca el DEM; y asi se obtiene las 14 variables, como ser Analytical Hillshading, slope, aspect, flow acumulation...* 
 
 
 # *Flujo de trabajo*

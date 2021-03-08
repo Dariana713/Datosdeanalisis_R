@@ -8,7 +8,7 @@ Para el análisis de las variables de Geo morfometría de utilizo el programa Rs
 
 *Carga de docuemntos prueba*
 Se guarda la información
->setwd("~/R/Pruebas/Prueba_19_02_21")
+In[ >setwd("~/R/Pruebas/Prueba_19_02_21")]
 >
 *carga libreria*
 Se necesito cargar una librería raster

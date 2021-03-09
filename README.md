@@ -21,6 +21,7 @@ Se necesito cargar una librería raster
 Se consulto get Data para descargar los Modelos digitales de Elevación de la zona de estudio.
 
 *#Descarga ALT*
+
 ```>DEM<-getData('alt', country='ESP', mask=TRUE)```
 ```>DEM```
 ```>plot(DEM)```
@@ -28,6 +29,7 @@ Se consulto get Data para descargar los Modelos digitales de Elevación de la zo
  *?terrain* 
 
 De estos era necesario conocer las pendiente y la orientación.
+
 ```>x <- terrain(DEM, opt=c('slope', 'aspect'), unit='degrees')```
 ```>plot(x)```
 
@@ -36,6 +38,7 @@ De estos era necesario conocer las pendiente y la orientación.
 Al tener la información se procedió a guardar la imagen formato TIF por lo que se instaló el paquete rgdal; y de esta forma guardar la imagen a ser procesada en SAGA GIS.
 
 Imagen TIF
+
 ```>install.packages("rgdal", dependencies = TRUE)```
 
 ```>library(rgdal)```

@@ -1,7 +1,8 @@
 # Datos de análisis de Geo morfometría
 
 Se muestran los análisis de realizados en Rstudio y en SAGA GIS, para realizar y analizar variables de Geo morfometría de una zona de estudio. 
-Para el análisis de las variables de Geo morfometría de utilizo el programa Rstudio donde se generó el modelo digital de elevación, es la pieza clave para el análisis geo morfométrico.
+Para el análisis de las variables de Geo morfometría de utilizo el programa Rstudio donde se generó el modelo digital de elevación, es la pieza clave para el análisis geo morfométrico.Los datos se agregaron a partir de datos de resolución SRTM de 90 m entre -60 y 60 de latitud. 'GADM' es una base de datos de límites administrativos globales. 'worldclim' es una base de datos de datos climáticos globales interpolados. 'SRTM' se refiere al CGIAR-SRTM lleno de agujeros (resolución de 90 m). 'countries' tiene polígonos para todos los países con una resolución más alta que los datos de 'wrld_simpl' en el paquete maptools. Pero se obtuvo un modelo a 1 km de resolución espacial. 
+
 
 
 # Código en Rstudio 
@@ -22,9 +23,23 @@ Se consulto get Data para descargar los Modelos digitales de Elevación de la zo
 
 *#Descarga ALT*
 
+Si el nombre es 'alt' o 'GADM', debe proporcionar un argumento 'country ='. Los países se especifican por sus códigos ISO de 3 letras. Se puede establecer 'máscara' en FALSO "FALSE" si los valores de los países vecinos se establecen, de lo contrario se coloca VERDADERO " TRUE", para conocer el del país en específico.  
+
 ```DEM<-getData('alt', country='ESP', mask=TRUE)```
 ```DEM```
 ```plot(DEM)```
+
+##### se concocieron sus coordenadas
+
+> DEM
+> class      : RasterLayer 
+> dimensions : 1044, 1656, 1728864  (nrow, ncol, ncell)
+> resolution : 0.008333333, 0.008333333  (x, y)
+> extent     : -9.4, 4.4, 35.2, 43.9  (xmin, xmax, ymin, ymax)
+> crs        : +proj=longlat +datum=WGS84 +no_defs 
+> source     : C:/Users/Usuario/Documents/Análisis de Tesis en Rstudio y SAGA GIS/R/Tesis12_02_21/ESP_msk_alt.grd 
+> names      : ESP_msk_alt 
+> values     : -13, 3322  (min, max)
 
  *?terrain* 
 
@@ -49,6 +64,7 @@ Imagen TIF
 El Modelos se analizó en el programa SAGA GIS, que es u sistema de análisis geo científicos automatizados de código abierto utilizado para analizar datos espaciales y gran cantidad de datos de módulos para el análisis de datos vectoriales (puntos, líneas y polígonos).
 La topografía que están directamente relacionados con la variabilidad de la humedad del suelo (Pike y Evans, 2009), como la acumulación de flujo terrestre. El índice de humedad topográfica, indica áreas donde el agua tiende a acumularse por efecto de la topografía y es un índice secundario derivado de la combinación del área de ladera ascendente que drena a través de un cierto punto por unidad de longitud de contorno y la pendiente del terreno local (Wilson y Gallant 2000). 
 La relación de geomorfometría e hidrología según Guevara y Vargas (2019), es útil para evitar redundancias estadísticas. 
+Tambien dentro del mismo análisis de terreno de SAGA GIS, se obtuvieron las variables de Insolación solar.
 
 ### 1
 En la opción de DATA, se cargó el DEM de España.
@@ -60,7 +76,8 @@ En el valor de elevación se coloca el DEM; y asi se obtiene las 14 variables, c
 
 
 # *Flujo de trabajo*
-![Flujo de procesos ](https://user-images.githubusercontent.com/78845785/109633763-c6e9b980-7b48-11eb-9fcf-4a6683ab787a.jpg)
+![Especifico](https://user-images.githubusercontent.com/78845785/111362508-2ab6cb00-868f-11eb-9d99-fbd22696464a.jpg)
+
 
 
 # *Referencias*

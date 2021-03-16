@@ -64,7 +64,7 @@ Imagen TIF
 El Modelos se analizó en el programa SAGA GIS, que es u sistema de análisis geo científicos automatizados de código abierto utilizado para analizar datos espaciales y gran cantidad de datos de módulos para el análisis de datos vectoriales (puntos, líneas y polígonos).
 La topografía que están directamente relacionados con la variabilidad de la humedad del suelo (Pike y Evans, 2009), como la acumulación de flujo terrestre. El índice de humedad topográfica, indica áreas donde el agua tiende a acumularse por efecto de la topografía y es un índice secundario derivado de la combinación del área de ladera ascendente que drena a través de un cierto punto por unidad de longitud de contorno y la pendiente del terreno local (Wilson y Gallant 2000). 
 La relación de geomorfometría e hidrología según Guevara y Vargas (2019), es útil para evitar redundancias estadísticas. 
-Tambien dentro del mismo análisis de terreno de SAGA GIS, se obtuvieron las variables de Insolación solar.
+Tambien dentro del mismo análisis de terreno de SAGA GIS, se obtuvieron las variables de incidencia de radiacón solar.
 
 ### 1
 En la opción de DATA, se cargó el DEM de España.
@@ -72,7 +72,7 @@ En la opción de DATA, se cargó el DEM de España.
 *En Geoprocessing se selecciona Terrain Analysis.
 Luego Basic terrain analysis.
 Despues se selcciona las coordenadas de la imagen.
-En el valor de elevación se coloca el DEM; y asi se obtiene las 14 variables, como ser Analytical Hillshading, slope, aspect, flow acumulation...* 
+En el valor de elevación se coloca el DEM; y asi se obtiene las 14 variables, como ser Analytical Hillshading, slope, aspect, flow acumulation...y tambien se calcularón otras dos variables de incidencia de radiacón solar * 
 
 
 # *Flujo de trabajo*

@@ -97,3 +97,7 @@ Wilson J. P., & Gallant J. C. (2000). Digital terrain analysis. Terrain analysis
 
 Insolación solar SAGA GIS: https://rdrr.io/cran/RSAGA/man/rsaga.insolation.html
 
+SRTM:https://srtm.csi.cgiar.org/
+WorldClim:https://www.worldclim.org/data/index.html
+
+
